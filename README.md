@@ -22,7 +22,7 @@ Or install it yourself as:
 ### on code
 Before usage, you should import this library code below:
 ```ruby
-requre "roman_numericals"
+require "roman_numericals"
 ```
 
 Also, you can exchange arabic number to roman style with codes below:
