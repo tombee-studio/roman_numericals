@@ -53,7 +53,7 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/roman_numericals.
+Bug reports and pull requests are welcome on GitHub at https://github.com/tomoya-kwansei/roman_numericals.
 
 ## License
 
