@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    roman_numericals (0.1.0)
+    roman_numericals (0.1.1)
 
 GEM
   remote: https://rubygems.org/
