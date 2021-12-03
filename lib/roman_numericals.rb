@@ -2,12 +2,19 @@
 
 require_relative "roman_numericals/version"
 
+class InvalidNumberError < StandardError; end
+
 class Integer
   COUNT = 4
   def to_roman
     dict = [['I', 'V'], ['X', 'L'], ['C', 'D'], ['M', '']]
     int = self
     roman = ''
+    if self <= 0
+      raise InvalidNumberError.new("#{self} must be positive integer")
+    elsif self >= 4000
+      raise InvalidNumberError.new("#{self} must be under 4000")
+    end
     COUNT.times do |i|
       div, r = int.divmod(10)
       a, b = dict[i]
@@ -40,6 +47,4 @@ module RomanNumericals
       puts "引数が1つ以上必要です"
     end
   end
-
-  main
 end

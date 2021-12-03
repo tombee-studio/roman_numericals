@@ -31,4 +31,20 @@ class RomanNumericalsTest < Test::Unit::TestCase
       assert_equal roman, i.to_roman
     end
   end
+
+  test "Integers (<= 0) raised InvalidNumberError" do
+    [0, -1, -10].each do |i|
+      assert_raise InvalidNumberError do
+        i.to_roman
+      end
+    end
+  end
+
+  test "Integers (>= 4000) raised InvalidNumberError" do
+    [4000, 4050, 10000].each do |i|
+      assert_raise InvalidNumberError do
+        i.to_roman
+      end
+    end
+  end
 end
