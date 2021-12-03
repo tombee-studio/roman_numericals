@@ -1,8 +1,6 @@
 # RomanNumericals
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/roman_numericals`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+*RomanNumericals* is a library to exchange arabic numbers to roman style.
 
 ## Installation
 
@@ -21,8 +19,31 @@ Or install it yourself as:
     $ gem install roman_numericals
 
 ## Usage
+### on code
+Before usage, you should import this library code below:
+```ruby
+require "roman_numericals"
+```
 
-TODO: Write usage instructions here
+Also, you can exchange arabic number to roman style with codes below:
+```ruby
+9.to_roman # => IX
+100.ro_roman # => C
+```
+
+If you will exchange not positive number under 3999, it will raise `InvalidNumberError`:
+```ruby
+0.to_roman # => InvalidNumberError
+-1.to_roman # => InvalidNumberError
+4000.to_roman # => InvalidNumberError
+```
+
+### on CLI
+You can on CLI.
+```bash
+$ roman_numericals 9
+IX
+```
 
 ## Development
 
@@ -32,7 +53,7 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/roman_numericals.
+Bug reports and pull requests are welcome on GitHub at https://github.com/tomoya-kwansei/roman_numericals.
 
 ## License
 
